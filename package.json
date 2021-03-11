@@ -1,6 +1,6 @@
 {
   "name": "homebridge-broadlink-easy",
-  "version": "4.4.2",
+  "version": "4.4.3",
   "description": "Broadlink RM Easy plugin (mini and pro) for homebridge with AC Pro and TV features",
   "license": "ISC",
   "scripts": {
