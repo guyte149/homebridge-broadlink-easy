@@ -71,7 +71,7 @@ const BroadlinkRMPlatform = class extends HomebridgePlatform {
     config.accessories.forEach((accessory) => {
       if (!accessory.type) throw new Error(`Each accessory must be configured with a "type". e.g. "switch"`);
       if (accessory.disabled) return;
-      if (!classTypes[accessory.type]) throw new Error(`homebridge-broadlink-rm-pro doesn't support accessories of type "${accessory.type}".`);
+      if (!classTypes[accessory.type]) throw new Error(`homebridge-broadlink-easy doesn't support accessories of type "${accessory.type}".`);
 
       const homeKitAccessory = new classTypes[accessory.type](log, accessory);
 
@@ -142,7 +142,7 @@ const BroadlinkRMPlatform = class extends HomebridgePlatform {
     const { config, log } = this;
 
     if (config && (config.hideWelcomeMessage || config.isUnitTest)) {
-      log(`\x1b[35m[INFO]\x1b[0m Running Homebridge Broadlink RM Plugin version \x1b[32m${npmPackage.version}\x1b[0m`)
+      log(`\x1b[35m[INFO]\x1b[0m Running Homebridge ${npmPackage.name} Plugin version \x1b[32m${npmPackage.version}\x1b[0m`)
 
       return
     }
@@ -150,9 +150,9 @@ const BroadlinkRMPlatform = class extends HomebridgePlatform {
     setTimeout(() => {
       log('')
       log(`**************************************************************************************************************`)
-      log(`** Welcome to version \x1b[32m${npmPackage.version}\x1b[0m of the \x1b[34mHomebridge Broadlink RM Plugin\x1b[0m!`)
+      log(`** Welcome to version \x1b[32m${npmPackage.version}\x1b[0m of the \x1b[34mHomebridge ${npmPackage.name} Plugin\x1b[0m!`)
       log('** ')
-      log(`** Find out what's in the latest release here: \x1b[4mhttps://github.com/kiwi-cam/homebridge-broadlink-rm/blob/master/CHANGELOG.md\x1b[0m`)
+      log(`** Find out what's in the latest release here: \x1b[4mhttps://github.com/aceslick911/homebridge-broadlink-easy/blob/master/CHANGELOG.md\x1b[0m`)
       log(`** `)
       log(`** If you like this plugin then please star it on GitHub or better yet`)
       log(`** buy me a drink using Paypal \x1b[4mhttps://paypal.me/kiwicamRM\x1b[0m.`)

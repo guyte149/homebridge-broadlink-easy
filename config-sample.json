@@ -1,6 +1,6 @@
 {
-	"platform": "BroadlinkRMPro",
-	"name": "BroadlinkRMPro",
+	"platform": "BroadlinkEasy",
+	"name": "BroadlinkEasy",
 	"hideWelcomeMessage": true,
 	"debug": false,
 	"hosts": [

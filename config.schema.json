@@ -1,5 +1,5 @@
 {
-  "pluginAlias": "homebridge-broadlink-rm-pro",
+  "pluginAlias": "homebridge-broadlink-easy",
   "pluginType": "platform",
   "schema": {
     "type": "object",
@@ -7,7 +7,7 @@
       "name": {
         "title": "Name",
         "type": "string",
-        "default": "BroadlinkRMPro",
+        "default": "BroadlinkEasy",
         "required": true
       },
       "hideWelcomeMessage": {
@@ -49,5 +49,11 @@
         }
       }
     }
-  }
+  },
+  "layout": [
+    "name",
+    "hideWelcomeMessage",
+    "debug",
+    "hosts"
+  ]
 }
