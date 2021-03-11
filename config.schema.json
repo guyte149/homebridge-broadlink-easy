@@ -1,6 +1,6 @@
 {
   "pluginAlias": "homebridge-broadlink-rm-pro",
-  "pluginType": "accessory",
+  "pluginType": "platform",
   "schema": {
     "type": "object",
     "properties": {
@@ -28,14 +28,14 @@
               "type": "string",
               "pattern": "^[a-f0-9]{12}$",
               "required": false,
-              "placeholder": "a043b0541457"
+              "placeholder": "a043b0541111"
             },            
             "isRfSupported": {
-              "title": "debug",
+              "title": "isRfSupported",
               "type": "boolean"
             },    
             "isRM4": {
-              "title": "debug",
+              "title": "isRM4",
               "type": "boolean"
             }
           },
