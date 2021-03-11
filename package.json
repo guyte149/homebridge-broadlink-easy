@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:kiwi-cam/homebridge-broadlink-rm.git"
+    "url": "git@github.com:aceslick911/homebridge-broadlink-rm-pro.git"
   },
   "dependencies": {
     "kiwicam-broadlinkjs-rm": "latest",

@@ -5,11 +5,8 @@ Welcome to the Broadlink RM Mini and Broadlink RM Pro plugin for [Homebridge](ht
 
 This plugin allows you to control your RM Mini and RM Pro with HomeKit using the Home app and Siri.
 
-## Like this plugin?
-
-If you like this plugin and want to show your support then please star the Github repo, or better yet; buy me a drink using [Paypal](https://paypal.me/kiwicamRM).
-
-Thank you!
+This fork has additional features:
+1. Native configuration editor for homebridge (config.schema.json)
 
 ## Documentation
 
@@ -27,6 +24,9 @@ If the plugin is unable to discover your device, it's likely you've locked the d
 This plugin should now be able to discover your device.
 
 ## Thanks
-Original: Thanks to @tattn (https://github.com/tattn/homebridge-rm-mini3), @PJCzx (https://github.com/PJCzx/homebridge-thermostat), @momodalo (https://github.com/momodalo/broadlinkjs), and @lprhodes (https://github.com/lprhodes/homebridge-broadlink-rm) whose time and effort got this started.
+  This has been forked from kiwi-cam. https://github.com/kiwi-cam/homebridge-broadlink-rm
+  "If you like this plugin and want to show your support then please star the Github repo, or better yet; buy me a drink using [Paypal](https://paypal.me/kiwicamRM)."
 
-In this fork: Thanks to @kiwi-cam (https://github.com/kiwi-cam), @Cloudore (https://github.com/Cloudore) and @Faisalthe01 (https://github.com/Faisalthe01) for your work!
+  Original: Thanks to @tattn (https://github.com/tattn/homebridge-rm-mini3), @PJCzx (https://github.com/PJCzx/homebridge-thermostat), @momodalo (https://github.com/momodalo/broadlinkjs), and @lprhodes (https://github.com/lprhodes/homebridge-broadlink-rm) whose time and effort got this started.
+
+  In this fork: Thanks to @kiwi-cam (https://github.com/kiwi-cam), @Cloudore (https://github.com/Cloudore) and @Faisalthe01 (https://github.com/Faisalthe01) for your work!

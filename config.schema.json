@@ -1,5 +1,5 @@
 {
-  "pluginAlias": "homebridge-broadlink-rm",
+  "pluginAlias": "homebridge-broadlink-rm-pro",
   "pluginType": "accessory",
   "schema": {
     "type": "object",

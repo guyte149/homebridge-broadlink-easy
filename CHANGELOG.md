@@ -1,5 +1,9 @@
 # Changes
 
+## 4.4.2
+ - Inital version - forked by aceslick911 from kiwi-cam/homebridge-broadlink-rm
+ - [Improvement] Adding plugin configuration editor (config.schema.json)
+
 ## 4.4.1
  - [Improvement] Adds pingUseArp configuration to use an ARP lookup instead of ICMP ping to test a device's status
  - [Improvement] Adds heater-cooler tempStepSize to support devices without 0.5 temperaure codes
