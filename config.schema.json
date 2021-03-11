@@ -1,40 +1,48 @@
 {
-  "pluginAlias": "homebridge-broadlink-easy",
+  "pluginAlias": "BroadlinkEasy",
   "pluginType": "platform",
   "schema": {
     "type": "object",
     "properties": {
-      "name": {
-        "title": "Name",
-        "type": "string",
-        "default": "BroadlinkEasy",
-        "required": true
+      "auto_detect":{
+        "title": "Automatically Detect Devices (Untick to manually configure)",
+        "type": "boolean",
+        "default": true
       },
       "hideWelcomeMessage": {
         "title": "hideWelcomeMessage",
-        "type": "boolean"
+        "type": "boolean",
+        "default": false
       },
       "debug": {
         "title": "debug",
-        "type": "boolean"
+        "type": "boolean",
+        "default": true
       },
       "hosts": {
+        "title": "Manually Configured Host(s)",
+        "condition": {
+          "functionBody": "return model.auto_detect === false;"
+        },
         "type": "array",
         "items": {
           "type": "object",
           "properties": {
             "address": {
-              "title": "IP Address / Hostname",
+              "title": "IP Address",
               "type": "string",
               "required": true,
-              "format": "hostname"
+              "format": "ipv4"
             },
             "mac": {
               "title": "MAC Address (lowercase no symbols)",
               "type": "string",
               "pattern": "^[a-f0-9]{12}$",
               "required": false,
-              "placeholder": "a043b0541111"
+              "placeholder": "a043b0541111",
+              "message": {
+                "pattern": "Please enter the MAC address as 12 characters all lowercase with no colon, space or other symbols"
+              }
             },            
             "isRfSupported": {
               "title": "isRfSupported",
@@ -51,9 +59,29 @@
     }
   },
   "layout": [
-    "name",
-    "hideWelcomeMessage",
-    "debug",
-    "hosts"
+    "auto_detect",
+    {
+      "key": "advanced",
+      "type": "section",
+      "title": "Advanced Settings",
+      "expandable": true,
+      "expanded": false,
+      "items": [
+        {"key":"hideWelcomeMessage", "value":"hideWelcomeMessage"},
+        {"key":"debug", "value":"debug"}
+      ]
+    },
+    {
+      "key":"hosts",
+      "type":"array",
+      "orderable": false,
+      "buttonText": "Add RM Device",
+      "items":[
+        "hosts[].address",
+        "hosts[].mac",
+        "hosts[].isRfSupported",
+        "hosts[].isRM4"
+      ]
+    }
   ]
 }

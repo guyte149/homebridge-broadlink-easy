@@ -41,6 +41,7 @@
 			},
 
 
+
 			{
 					"name": "Learn IR Mini",
 					"host": "192.168.86.22",
@@ -67,6 +68,15 @@
 			},
 
 
+
+			{
+				"name": "Learn RF ProS",
+				"host": "192.168.86.11",
+				"type": "learn-code",
+				"onDuration": 60,
+				"scanFrequency": true,
+				"enableAutoOff": true
+			},
 			{
 					"name": "Learn RF Pro",
 					"host": "192.168.86.33",
@@ -75,14 +85,7 @@
 					"scanFrequency": true,
 					"enableAutoOff": true
 			},
-			{
-					"name": "Learn RF ProS",
-					"host": "192.168.86.11",
-					"type": "learn-code",
-					"onDuration": 60,
-					"scanFrequency": true,
-					"enableAutoOff": true
-			},
+
 
 			
 			{
@@ -202,68 +205,67 @@
 
 
 
-			{
-					"name": "Ceiling Fan",
-					"host": "192.168.86.33",
-					"type": "switch",
-					"data": {
-							"on": "b2..RF_CODES_START_WITH_b1_or_b2_REPLACE_THIS...",
-							"off": "b2..RF_CODES_START_WITH_b1_or_b2_REPLACE_THIS..."
-					}
-			},
-			{
-					"name": "Ceiling Light",
-					"host": "192.168.86.33",
-					"type": "switch",
-					"data": {
-							"on": "b2..RF_CODES_START_WITH_b1_or_b2_REPLACE_THIS...",
-							"off": "b2..RF_CODES_START_WITH_b1_or_b2_REPLACE_THIS..."
-					}
-			},
-			{
-					"name": "Portable AC",
-					"host": "192.168.86.33",
-					"type": "air-conditioner",
-					"maxTemperature": 26,
-					"noHumidity": true,
-					"turnOnWhenOff": true,
-					"allowResend": true,
-					"preventResendHex": true,
-					"autoSwitchName": "Portable AC Power",
-					"ignoreTemperatureWhenOff": true,
-					"replaceAutoMode": "cool",
-					"data": {
-							"off": "2600..IR_CODES_START_WITH_2600_REPLACE_THIS...",
-							"temperature16": {
-									"data": "2600..IR_CODES_START_WITH_2600_REPLACE_THIS...",
-									"pseudo-mode": "cool"
-							},
-							"temperature17": {
-									"data": "2600..IR_CODES_START_WITH_2600_REPLACE_THIS...",
-									"pseudo-mode": "cool"
-							},
-							"temperature18": {
-									"data": "2600..IR_CODES_START_WITH_2600_REPLACE_THIS...",
-									"pseudo-mode": "cool"
-							},
-							"temperature19": {
-									"data": "2600..IR_CODES_START_WITH_2600_REPLACE_THIS...",
-									"pseudo-mode": "cool"
-							},
-							"temperature20": {
-									"data": "2600..IR_CODES_START_WITH_2600_REPLACE_THIS...",
-									"pseudo-mode": "cool"
-							},
-							"temperature23": {
-									"data": "2600..IR_CODES_START_WITH_2600_REPLACE_THIS...",
-									"pseudo-mode": "cool"
-							},
-							"on": "2600..IR_CODES_START_WITH_2600_REPLACE_THIS..."
-					}
-			}
-	],
-	"_bridge": {
-			"username": "0E:B9:BD:B8:11:23",
-			"port": 38795
-	}
+		{
+				"name": "Ceiling Fan",
+				"host": "192.168.86.33",
+				"type": "switch",
+				"data": {
+						"on": "b2..RF_CODES_START_WITH_b1_or_b2_REPLACE_THIS...",
+						"off": "b2..RF_CODES_START_WITH_b1_or_b2_REPLACE_THIS..."
+				}
+		},
+		{
+				"name": "Ceiling Light",
+				"host": "192.168.86.33",
+				"type": "switch",
+				"data": {
+						"on": "b2..RF_CODES_START_WITH_b1_or_b2_REPLACE_THIS...",
+						"off": "b2..RF_CODES_START_WITH_b1_or_b2_REPLACE_THIS..."
+				}
+		},
+
+		{
+				"name": "Portable AC",
+				"host": "192.168.86.33",
+				"type": "air-conditioner",
+				"maxTemperature": 26,
+				"noHumidity": true,
+				"turnOnWhenOff": true,
+				"allowResend": true,
+				"preventResendHex": true,
+				"autoSwitchName": "Portable AC Power",
+				"ignoreTemperatureWhenOff": true,
+				"replaceAutoMode": "cool",
+				"data": {
+						"off": "2600..IR_CODES_START_WITH_2600_REPLACE_THIS...",
+						"temperature16": {
+								"data": "2600..IR_CODES_START_WITH_2600_REPLACE_THIS...",
+								"pseudo-mode": "cool"
+						},
+						"temperature17": {
+								"data": "2600..IR_CODES_START_WITH_2600_REPLACE_THIS...",
+								"pseudo-mode": "cool"
+						},
+						"temperature18": {
+								"data": "2600..IR_CODES_START_WITH_2600_REPLACE_THIS...",
+								"pseudo-mode": "cool"
+						},
+						"temperature19": {
+								"data": "2600..IR_CODES_START_WITH_2600_REPLACE_THIS...",
+								"pseudo-mode": "cool"
+						},
+						"temperature20": {
+								"data": "2600..IR_CODES_START_WITH_2600_REPLACE_THIS...",
+								"pseudo-mode": "cool"
+						},
+						"temperature23": {
+								"data": "2600..IR_CODES_START_WITH_2600_REPLACE_THIS...",
+								"pseudo-mode": "cool"
+						},
+						"on": "2600..IR_CODES_START_WITH_2600_REPLACE_THIS..."
+				}
+		}
+
+
+	]
 }

@@ -1,5 +1,12 @@
 # Changes
 
+## 4.4.4
+ - [Bug] Fixed default config platform name (name and platform should be "BroadlinkEasy")
+ - [Improvement] Implemented automatic or manual detection modes in config
+
+## 4.4.3
+ - [Improvement] Renamed to Broadlink Easy
+
 ## 4.4.2
  - Inital version - forked by aceslick911 from kiwi-cam/homebridge-broadlink-rm
  - [Improvement] Adding plugin configuration editor (config.schema.json)
