@@ -230,67 +230,67 @@ class TVAccessory extends BroadlinkRMAccessory {
         callback(null);
       });
 
-    this.serviceManager
-      .getCharacteristic(Characteristic.RemoteKey)
-      .on('set', (newValue, callback) => {
-        if (!data || !data.remote) {
-          log(`${name} RemoteKey: No remote keys found. Ignoring request.`);
-          callback(null);
-          return;
-        }
+    // this.serviceManager
+    //   .getCharacteristic(Characteristic.RemoteKey)
+    //   .on('set', (newValue, callback) => {
+    //     if (!data || !data.remote) {
+    //       log(`${name} RemoteKey: No remote keys found. Ignoring request.`);
+    //       callback(null);
+    //       return;
+    //     }
 
-        let hexData = null;
-        switch (newValue) {
-          case Characteristic.RemoteKey.REWIND:
-            hexData = data.remote.rewind; // not found yet
-            break;
-          case Characteristic.RemoteKey.FAST_FORWARD:
-            hexData = data.remote.fastForward; // not found yet
-            break;
-          case Characteristic.RemoteKey.NEXT_TRACK:
-            hexData = data.remote.nextTrack; // not found yet
-            break;
-          case Characteristic.RemoteKey.PREVIOUS_TRACK:
-            hexData = data.remote.previousTrack; // not found yet
-            break;
-          case Characteristic.RemoteKey.ARROW_UP:
-            hexData = data.remote.arrowUp;
-            break;
-          case Characteristic.RemoteKey.ARROW_DOWN:
-            hexData = data.remote.arrowDown;
-            break;
-          case Characteristic.RemoteKey.ARROW_LEFT:
-            hexData = data.remote.arrowLeft;
-            break;
-          case Characteristic.RemoteKey.ARROW_RIGHT:
-            hexData = data.remote.arrowRight;
-            break;
-          case Characteristic.RemoteKey.SELECT:
-            hexData = data.remote.select;
-            break;
-          case Characteristic.RemoteKey.BACK:
-            hexData = data.remote.back;
-            break;
-          case Characteristic.RemoteKey.EXIT:
-            hexData = data.remote.exit;
-            break;
-          case Characteristic.RemoteKey.PLAY_PAUSE:
-            hexData = data.remote.playPause;
-            break;
-          case Characteristic.RemoteKey.INFORMATION:
-            hexData = data.remote.info;
-            break;
-        }
+    //     let hexData = null;
+    //     switch (newValue) {
+    //       case Characteristic.RemoteKey.REWIND:
+    //         hexData = data.remote.rewind; // not found yet
+    //         break;
+    //       case Characteristic.RemoteKey.FAST_FORWARD:
+    //         hexData = data.remote.fastForward; // not found yet
+    //         break;
+    //       case Characteristic.RemoteKey.NEXT_TRACK:
+    //         hexData = data.remote.nextTrack; // not found yet
+    //         break;
+    //       case Characteristic.RemoteKey.PREVIOUS_TRACK:
+    //         hexData = data.remote.previousTrack; // not found yet
+    //         break;
+    //       case Characteristic.RemoteKey.ARROW_UP:
+    //         hexData = data.remote.arrowUp;
+    //         break;
+    //       case Characteristic.RemoteKey.ARROW_DOWN:
+    //         hexData = data.remote.arrowDown;
+    //         break;
+    //       case Characteristic.RemoteKey.ARROW_LEFT:
+    //         hexData = data.remote.arrowLeft;
+    //         break;
+    //       case Characteristic.RemoteKey.ARROW_RIGHT:
+    //         hexData = data.remote.arrowRight;
+    //         break;
+    //       case Characteristic.RemoteKey.SELECT:
+    //         hexData = data.remote.select;
+    //         break;
+    //       case Characteristic.RemoteKey.BACK:
+    //         hexData = data.remote.back;
+    //         break;
+    //       case Characteristic.RemoteKey.EXIT:
+    //         hexData = data.remote.exit;
+    //         break;
+    //       case Characteristic.RemoteKey.PLAY_PAUSE:
+    //         hexData = data.remote.playPause;
+    //         break;
+    //       case Characteristic.RemoteKey.INFORMATION:
+    //         hexData = data.remote.info;
+    //         break;
+    //     }
 
-        if (!hexData) {
-          log(`${name} RemoteKey: No IR code found for received remote input!`);
-          callback(null);
-          return;
-        }
+    //     if (!hexData) {
+    //       log(`${name} RemoteKey: No IR code found for received remote input!`);
+    //       callback(null);
+    //       return;
+    //     }
 
-        this.performSend(hexData);
-        callback(null);
-      });
+    //     this.performSend(hexData);
+    //     callback(null);
+    //   });
 
     this.serviceManager
       .getCharacteristic(Characteristic.PictureMode)
