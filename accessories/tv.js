@@ -20,7 +20,7 @@ class TVAccessory extends BroadlinkRMAccessory {
     config.offDuration = config.offDuration || 60;
     config.onDuration = config.onDuration || 60;
     
-    config.subType = config.subType || 'volume';
+    config.subType = config.subType || 'tv';
 
     if (
       config.enableAutoOn === undefined &&
