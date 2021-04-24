@@ -219,7 +219,7 @@ class SwitchAccessory extends BroadlinkRMAccessory {
         this.performSend(hexData);
         callback(null);
       });
-      this.serviceManager.service.addLinkedService(speakerService)
+      // this.serviceManager.service.addLinkedService(speakerService)
     // this.serviceManagers.push(speakerService);
 
   }
