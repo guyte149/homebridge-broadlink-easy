@@ -220,8 +220,8 @@ class SwitchAccessory extends BroadlinkRMAccessory {
         callback(null);
       });
 
-    this.serviceManagers.push(speakerService);
-    
+    // this.serviceManagers.push(speakerService);
+
   }
 }
 
