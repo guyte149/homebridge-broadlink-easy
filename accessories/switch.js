@@ -161,20 +161,20 @@ class SwitchAccessory extends BroadlinkRMAccessory {
     const { data, name, config, serviceManagerType } = this;
     const { on, off } = data || { };
     
-    this.serviceManager = new ServiceManagerTypes[serviceManagerType](name, Service.Switch, this.log);
+    // this.serviceManager = new ServiceManagerTypes[serviceManagerType](name, Service.Switch, this.log);
 
-    this.serviceManager.addToggleCharacteristic({
-      name: 'switchState',
-      type: Characteristic.On,
-      getMethod: this.getCharacteristicValue,
-      setMethod: this.setCharacteristicValue,
-      bind: this,
-      props: {
-        onData: on || data,
-        offData: off || undefined,
-        setValuePromise: this.setSwitchState.bind(this)
-      }
-    });
+    // this.serviceManager.addToggleCharacteristic({
+    //   name: 'switchState',
+    //   type: Characteristic.On,
+    //   getMethod: this.getCharacteristicValue,
+    //   setMethod: this.setCharacteristicValue,
+    //   bind: this,
+    //   props: {
+    //     onData: on || data,
+    //     offData: off || undefined,
+    //     setValuePromise: this.setSwitchState.bind(this)
+    //   }
+    // });
 
     const speakerService = new Service.TelevisionSpeaker('Speaker', 'Speaker');
 
