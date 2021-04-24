@@ -176,49 +176,49 @@ class SwitchAccessory extends BroadlinkRMAccessory {
       }
     });
 
-    const speakerService = new Service.TelevisionSpeaker('Speaker', 'Speaker');
+    // const speakerService = new Service.TelevisionSpeaker('Speaker', 'Speaker');
 
-    speakerService.setCharacteristic(
-      Characteristic.Active,
-      Characteristic.Active.ACTIVE
-    );
-    speakerService.setCharacteristic(
-      Characteristic.VolumeControlType,
-      Characteristic.VolumeControlType.ABSOLUTE
-    );
+    // speakerService.setCharacteristic(
+    //   Characteristic.Active,
+    //   Characteristic.Active.ACTIVE
+    // );
+    // speakerService.setCharacteristic(
+    //   Characteristic.VolumeControlType,
+    //   Characteristic.VolumeControlType.ABSOLUTE
+    // );
 
-    speakerService
-      .getCharacteristic(Characteristic.VolumeSelector)
-      .on('set', (newValue, callback) => {
-        if (!data || !data.volume) {
-          log(
-            `${name} VolumeSelector: No settings data found. Ignoring request.`
-          );
-          callback(null);
-          return;
-        }
+    // speakerService
+    //   .getCharacteristic(Characteristic.VolumeSelector)
+    //   .on('set', (newValue, callback) => {
+    //     if (!data || !data.volume) {
+    //       log(
+    //         `${name} VolumeSelector: No settings data found. Ignoring request.`
+    //       );
+    //       callback(null);
+    //       return;
+    //     }
 
-        let hexData = null;
-        switch (newValue) {
-          case Characteristic.VolumeSelector.INCREMENT:
-            hexData = data.volume.up;
-            break;
-          case Characteristic.VolumeSelector.DECREMENT:
-            hexData = data.volume.down;
-            break;
-        }
+    //     let hexData = null;
+    //     switch (newValue) {
+    //       case Characteristic.VolumeSelector.INCREMENT:
+    //         hexData = data.volume.up;
+    //         break;
+    //       case Characteristic.VolumeSelector.DECREMENT:
+    //         hexData = data.volume.down;
+    //         break;
+    //     }
 
-        if (!hexData) {
-          log(
-            `${name} VolumeSelector: No IR code found for received remote input!`
-          );
-          callback(null);
-          return;
-        }
+    //     if (!hexData) {
+    //       log(
+    //         `${name} VolumeSelector: No IR code found for received remote input!`
+    //       );
+    //       callback(null);
+    //       return;
+    //     }
 
-        this.performSend(hexData);
-        callback(null);
-      });
+    //     this.performSend(hexData);
+    //     callback(null);
+    //   });
       // this.serviceManager.service.addLinkedService(speakerService)
     // this.serviceManagers.push(speakerService);
 

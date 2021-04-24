@@ -344,6 +344,9 @@ class TVAccessory extends BroadlinkRMAccessory {
       Characteristic.VolumeControlType.ABSOLUTE
     );
 
+    log(
+      `${name} setting speaker callback`
+    );
     speakerService
       .getCharacteristic(Characteristic.VolumeSelector)
       .on('set', (newValue, callback) => {
@@ -354,7 +357,9 @@ class TVAccessory extends BroadlinkRMAccessory {
           callback(null);
           return;
         }
-
+        log(
+          `${name} inside speaker callback`
+        );
         let hexData = null;
         switch (newValue) {
           case Characteristic.VolumeSelector.INCREMENT:
