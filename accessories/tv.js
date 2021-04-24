@@ -379,27 +379,27 @@ class TVAccessory extends BroadlinkRMAccessory {
 
     this.serviceManagers.push(speakerService);
 
-    if (data.inputs && data.inputs instanceof Array) {
-      for (let i = 0; i < data.inputs.length; i++) {
-        const input = data.inputs[i];
-        const inputService = new Service.InputSource(`input${i}`, `input${i}`);
+    // if (data.inputs && data.inputs instanceof Array) {
+    //   for (let i = 0; i < data.inputs.length; i++) {
+    //     const input = data.inputs[i];
+    //     const inputService = new Service.InputSource(`input${i}`, `input${i}`);
 
-        inputService
-          .setCharacteristic(Characteristic.Identifier, i)
-          .setCharacteristic(Characteristic.ConfiguredName, input.name)
-          .setCharacteristic(
-            Characteristic.IsConfigured,
-            Characteristic.IsConfigured.CONFIGURED
-          )
-          .setCharacteristic(
-            Characteristic.InputSourceType,
-            getInputType(input.type)
-          );
+    //     inputService
+    //       .setCharacteristic(Characteristic.Identifier, i)
+    //       .setCharacteristic(Characteristic.ConfiguredName, input.name)
+    //       .setCharacteristic(
+    //         Characteristic.IsConfigured,
+    //         Characteristic.IsConfigured.CONFIGURED
+    //       )
+    //       .setCharacteristic(
+    //         Characteristic.InputSourceType,
+    //         getInputType(input.type)
+    //       );
 
-        this.serviceManagers.push(inputService);
-        this.serviceManager.service.addLinkedService(inputService);
-      }
-    }
+    //     this.serviceManagers.push(inputService);
+    //     this.serviceManager.service.addLinkedService(inputService);
+    //   }
+    // }
   }
 }
 
